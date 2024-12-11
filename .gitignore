@@ -1,0 +1,10 @@
+target/
+*.class
+*.war
+
+.idea/
+*.iml
+
+*.log
+*.tmp
+*.bak
