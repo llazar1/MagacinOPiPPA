@@ -85,8 +85,8 @@ public class RadnikDao {
             while (rs.next()) {
                 resultList.add(new Radnik(
                         rs.getInt("radnik_id"),
-                        rs.getString("ime_i_prezime").split(" ")[0], // Pretpostavlja se da je ime i prezime spojeno
-                        rs.getString("ime_i_prezime").split(" ")[1], // Splićenje za prezime
+                        rs.getString("ime_i_prezime").split(" ")[0], 
+                        rs.getString("ime_i_prezime").split(" ")[1], 
                         rs.getString("username"),
                         rs.getString("password"),
                         rs.getString("telefon")

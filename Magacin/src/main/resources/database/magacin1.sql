@@ -37,21 +37,3 @@ CREATE UNIQUE INDEX uq_radnik_telefon ON radnik(telefon);
 CREATE INDEX fk_prostor_radnik_id_idx ON prostor(radnik_id);
 CREATE INDEX fk_proizvod_prostor_id_idx ON proizvod(prostor_id);
 
-/*
--- Inicijalni podaci
-INSERT INTO radnik (ime_i_prezime, username, password, telefon)
-VALUES 
-('Marko Marković', 'marko123', 'pass123', '0641234567'),
-('Jelena Jovanović', 'jelena456', 'pass456', '0659876543');
-
-INSERT INTO prostor (radnik_id, ime_magacina)
-VALUES 
-(1, 'Glavni magacin'),
-(2, 'Pomoćni magacin');
-
-INSERT INTO proizvod (prostor_id, naziv, tip, tezina, kolicina, napomena)
-VALUES 
-(1, 'Televizor', 'Elektronika', '15kg', 10, 'Na stanju'),
-(1, 'Laptop', 'Elektronika', '2.5kg', 5, 'Novi modeli'),
-(2, 'Šrafovi', 'Građevinski materijal', '0.5kg', 100, 'Veliki paket');
-*/

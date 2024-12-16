@@ -26,7 +26,7 @@ public class ResourcesManager {
     }
 
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection("jdbc:mysql://localhost:3306/magacin", "root", "");
+        return DriverManager.getConnection("jdbc:mysql://localhost:3306/magacin1", "root", "");
     }
 
     public static void closeResources(ResultSet resultSet, PreparedStatement preparedStatement) throws SQLException {

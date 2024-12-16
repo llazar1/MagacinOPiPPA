@@ -37,10 +37,13 @@ public class MagacinskiProstorRest {
 
     // PUT metoda za ažuriranje magacinskog prostora
     @PUT
+    @Path("/{id}") 
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response updateMagacinskiProstor(MagacinskiProstor magacinskiProstor) {
+    public Response updateMagacinskiProstor(@PathParam("id") int id, MagacinskiProstor magacinskiProstor) {
         try {
+            magacinskiProstor.setId(id);
+            
             magacinskiProstorService.updateMagacinskiProstor(magacinskiProstor);
             return Response.status(Response.Status.OK).entity(magacinskiProstor).build();
         } catch (MagacinException e) {

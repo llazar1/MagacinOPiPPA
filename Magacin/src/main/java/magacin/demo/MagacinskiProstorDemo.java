@@ -22,9 +22,20 @@ public class MagacinskiProstorDemo {
         try {
             
             // Dodavanje magacinskog prostora sa ID-jem radnika 
-            //MagacinskiProstor noviProstor = new MagacinskiProstor(0, "Trem", 1);
-            //service.addMagacinskiProstor(noviProstor);
-            //System.out.println("Uspesno dodat magacinski prostor: " + noviProstor);
+            //MagacinskiProstor noviProstor = new MagacinskiProstor(0, "Hala 1", 1);
+            //MagacinskiProstor noviProstor = new MagacinskiProstor(0, "Hala 2", 2);
+            //MagacinskiProstor noviProstor = new MagacinskiProstor(0, "Skladiste A", 3);
+            //MagacinskiProstor noviProstor = new MagacinskiProstor(0, "Skladiste B", 4);
+            //MagacinskiProstor noviProstor = new MagacinskiProstor(0, "Hala 3", 8);
+            //MagacinskiProstor noviProstor = new MagacinskiProstor(0, "Skladiste C", 9);
+            //MagacinskiProstor noviProstor = new MagacinskiProstor(0, "Hala 4", 10);
+            //MagacinskiProstor noviProstor = new MagacinskiProstor(0, "Hala 5", 11);
+            //MagacinskiProstor noviProstor = new MagacinskiProstor(0, "Skladiste D", 12);
+            //MagacinskiProstor noviProstor = new MagacinskiProstor(0, "Skladiste E", 14);
+            MagacinskiProstor noviProstor = new MagacinskiProstor(0, "Hala 6", 13);
+            
+            service.addMagacinskiProstor(noviProstor);
+            System.out.println("Uspesno dodat magacinski prostor: " + noviProstor);
 
             // Dobijanje magacinskog prostora po ID-u
             //MagacinskiProstor prostor = service.getMagacinskiProstorById(1);
@@ -43,9 +54,9 @@ public class MagacinskiProstorDemo {
             //}
 
             // Brisanje magacinskog prostora
-            int prostorId = 8; // Mora postojati magacinski prostor sa zadatim ID-om
-            service.deleteMagacinskiProstor(prostorId);
-            System.out.println("Uspesno obrisan magacinski prostor sa ID-jem " + prostorId + ".");
+            //int prostorId = 8; // Mora postojati magacinski prostor sa zadatim ID-om
+            //service.deleteMagacinskiProstor(prostorId);
+            //System.out.println("Uspesno obrisan magacinski prostor sa ID-jem " + prostorId + ".");
            
         } catch (MagacinException e) {
             System.err.println("Doslo je do greske: " + e.getMessage());

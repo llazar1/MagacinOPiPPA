@@ -100,4 +100,24 @@ public class RadnikRest {
                     .entity("Error deleting radnik: " + e.getMessage()).build();
         }
     }
+    
+    @POST
+    @Path("/login")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response login(Radnik loginDetails) {
+        try {
+            Radnik radnik = radnikService.login(loginDetails.getUsername(), loginDetails.getPassword());
+
+            if (radnik != null) {
+                return Response.status(Response.Status.OK).entity(radnik).build();
+            } else {
+                return Response.status(Response.Status.UNAUTHORIZED)
+                        .entity("Invalid username or password").build();
+            }
+        } catch (MagacinException e) {
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR)
+                    .entity("Error while logging in: " + e.getMessage()).build();
+        }
+    }
 }
